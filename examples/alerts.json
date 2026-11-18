@@ -1,0 +1,102 @@
+[
+  {
+    "timestamp": "2026-11-18T09:02:11Z",
+    "rule": {"name": "SSH Brute Force Detected"},
+    "severity": "high",
+    "source_tool": "wazuh",
+    "user": {"name": "svc_backup"},
+    "host": {"name": "JUMP01.corp.local"},
+    "source": {"ip": "203.0.113.44"}
+  },
+  {
+    "timestamp": "2026-11-18T09:03:02Z",
+    "rule": {"name": "ssh_brute_force"},
+    "severity": "high",
+    "source_tool": "suricata",
+    "src_ip": "203.0.113.44",
+    "dst_ip": "10.20.4.11"
+  },
+  {
+    "timestamp": "2026-11-18T09:04:48Z",
+    "rule": {"name": "SSH Brute Force Detected"},
+    "severity": "high",
+    "source_tool": "wazuh",
+    "user": {"name": "svc_backup"},
+    "host": {"name": "jump01"},
+    "source": {"ip": "203.0.113.44"}
+  },
+  {
+    "timestamp": "2026-11-18T09:06:20Z",
+    "rule": {"name": "Successful SSH Login After Repeated Failures"},
+    "severity": "critical",
+    "source_tool": "edr",
+    "user": {"name": "svc_backup"},
+    "host": {"name": "jump01"},
+    "process": {"name": "sshd"}
+  },
+  {
+    "timestamp": "2026-11-18T09:09:55Z",
+    "rule": {"name": "Suspicious Outbound Traffic"},
+    "severity": "high",
+    "source_tool": "edr",
+    "host": {"name": "jump01"},
+    "destination": {"ip": "198.51.100.77"}
+  },
+  {
+    "timestamp": "2026-11-18T09:11:02Z",
+    "rule": {"name": "C2 Beacon Pattern"},
+    "severity": "high",
+    "source_tool": "suricata",
+    "src_ip": "10.20.4.11",
+    "dst_ip": "198.51.100.77"
+  },
+  {
+    "timestamp": "2026-11-18T09:14:30Z",
+    "rule": {"name": "Vulnerability Scan Detected"},
+    "severity": "low",
+    "source_tool": "vulnscanner",
+    "host": {"name": "jump01"}
+  },
+  {
+    "timestamp": "2026-11-18T10:41:09Z",
+    "rule": {"name": "Impossible Travel Sign-In"},
+    "severity": "medium",
+    "source_tool": "idp",
+    "user": {"name": "priya.shah"},
+    "source": {"ip": "192.0.2.19"}
+  },
+  {
+    "timestamp": "2026-11-18T10:42:33Z",
+    "rule": {"name": "MFA Prompt Bombing"},
+    "severity": "medium",
+    "source_tool": "idp",
+    "user": {"name": "priya.shah"}
+  },
+  {
+    "timestamp": "2026-11-18T13:20:00Z",
+    "rule": {"name": "Malware Detected"},
+    "severity": "critical",
+    "source_tool": "edr",
+    "host": {"name": "FIN-WS07"},
+    "user": {"name": "r.iyer"},
+    "file": {"hash": {"sha256": "8f14e45fceea167a5a36dedd4bea2543b1cf9f1f0f2c0d3d0e5a6b7c8d9e0f11"}}
+  },
+  {
+    "timestamp": "2026-11-18T13:21:40Z",
+    "rule": {"name": "Malware Detected"},
+    "severity": "critical",
+    "source_tool": "av-gateway",
+    "host": {"name": "fin-ws07.corp.local"},
+    "user": {"name": "r.iyer"},
+    "file": {"hash": {"sha256": "8f14e45fceea167a5a36dedd4bea2543b1cf9f1f0f2c0d3d0e5a6b7c8d9e0f11"}}
+  },
+  {
+    "timestamp": "2026-11-18T13:25:12Z",
+    "rule": {"name": "Lateral Movement via SMB"},
+    "severity": "high",
+    "source_tool": "edr",
+    "host": {"name": "fin-ws07"},
+    "user": {"name": "r.iyer"},
+    "destination": {"ip": "10.20.9.15"}
+  }
+]

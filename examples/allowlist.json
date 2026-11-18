@@ -1,0 +1,20 @@
+{
+  "suppress": [
+    {
+      "name": "authorized-scanner",
+      "match": {
+        "rule": "Vulnerability Scan Detected",
+        "source": "vulnscanner"
+      },
+      "reason": "Authenticated findings scanner, runs hourly by design"
+    },
+    {
+      "name": "lab-host-noise",
+      "match": {
+        "host": "lab-dc01",
+        "severity": "low"
+      },
+      "reason": "Isolated purple-team lab, low severity only"
+    }
+  ]
+}
